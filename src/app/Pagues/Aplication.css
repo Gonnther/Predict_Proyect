@@ -1,0 +1,42 @@
+*{
+	box-sizing: content-box;
+	/*background-color: #413973;*/
+}
+
+
+.aplicationcss {
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	grid-template-areas:
+	". . . ."
+	". . . ."
+	". red green ."
+	". spa spa ."
+	". . . .";
+}
+
+.red {
+	background: rgba(247,40,210);
+	background: linear-gradient(0deg, rgba(247,40,210,1) 0%, rgba(255,100,100,1) 100%);
+	grid-area: red;
+}
+.red:active {
+	background: radial-gradient(circle, rgba(255,100,100,1) 90%, rgba(247,40,210,1) 100%);
+}
+.green {
+	background: rgba(41,214,214);
+	background: linear-gradient(0deg, rgba(40,214,214,1) 0%, rgba(100,255,140,1) 100%);
+	grid-area: green;
+}
+.green:active {
+		background: radial-gradient(circle, rgba(100,255,140,1) 90%, rgba(40,214,214,1) 100%);
+}
+.spa {
+	letter-spacing: 1px;
+	text-align: center;
+	color: pink;
+	grid-area: spa;
+}
+
+

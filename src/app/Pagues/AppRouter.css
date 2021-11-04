@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	text-decoration: none;
+	/*background-color: #413973;*/
+	background-color: #000000;
+
+}
+
+.Nav {
+	width: 100vw;
+	height: 5vh;
+	border: 8px;
+	background-color: #777;
+	border-color: #fff;
+	display: grid;
+	grid-template-areas: 
+	"Home About";
+}
+
+.Home {
+	grid-area: Home;
+	letter-spacing: 4px;
+	font-size: 3em;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #f2f2f2;
+}
+.Project {
+	letter-spacing: 4px;
+	grid-area: Project;
+	text-decoration: none;
+	font-family: Trajan ;
+	color: #f2f2f2;
+	font-size: 3em;
+}
+.Next {
+	letter-spacing: 4px;
+	grid-area: Next;
+	text-decoration: none;
+	font-family: Trajan ;
+	color: #f2f2f2;
+	font-size: 3em;
+}
+.About {
+	font-size: 3em;
+	letter-spacing: 4px;
+	grid-area: About;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #f2f2f2;
+
+}
+
+.Link{
+	position: relative;
+	display: grid;
+	border:5px;
+	border-style: solid;
+	border-color: #fff;
+}
+
+
+.Content {
+	margin-top: 7vh;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7vw;
+	padding-bottom: 7vw;
+	width: 80vw;
+	align-content: center;
+	border:5px;
+	border-style: solid;
+	border-color: #fff;
+	color: #fff;
+	display: grid;
+	grid-template-areas:
+	"box1 box2";
+	justify-items: center;
+	justify-content: space-evenly;
+}
+
+.box1{
+	margin: 0 auto;
+	grid-area: box1;
+	background-color: #777;
+	background: #ef5fa0;
+	background: -moz-linear-gradient(left, #ef5fa0 0%, #f93959 50%, #00aa6e 51%, #2dcb8c 100%);
+	background: -webkit-linear-gradient(left, #ef5fa0 0%, #f93959 50%, #00aa6e 51%, #2dcb8c 100%);
+	background: linear-gradient(left, #ef5fa0 0%, #f93959 50%, #00aa6e 51%, #2dcb8c 100%);
+	height: 23vw;
+	width: 23vw;
+
+}
+
+.box2{
+	margin: 0 auto;
+	grid-area: box2;
+	background-color: #777;
+	/*filter: blur(5px);*/
+	height: 23vw;
+	width: 23vw;
+
+}
+
+.text {
+	color: #fff;
+	letter-spacing: 2px;
+	text-align: center;
+	width: 23vw;
+	font-size: 4vw;
+	font-weight: 100;
+}
+
+
+
+/*
+	grid-area: Home;
+	color: #f2f2f2;
+	font-size: 40px;
+	text-decoration: none;
+	background-color: #79bed9;*/
+/*.project {
+	letter-spacing: 4px;
+	background-color: #79bed9;
+	text-align: center;
+	text-decoration: none;
+	font-family: impact ;
+	color: #f2f2f2;
+	box-shadow: 4px 3px 0 #7a7a7a;
+	font-size: 4em;
+}*/
+
+/*	-webkit-box-shadow: 0px 25px 50px -15px rgba(0,0,0,50);
+	-moz-box-shadow:0px 25px 50px -15px rgba(0,0,0,50);
+	box-shadow: 0px 25px 50px -15px rgba(0,0,0,50);*/
