@@ -13,7 +13,7 @@ class Cargando extends React.Component {
 		
 		let entrenar = [];
 		let obj = null;
-		const url = 'http://192.168.1.106:3000/api/tasks';
+		const url = '/api/tasks';
 		let predecir = null;
 		let res = null
 		this.loader = async function load() {
