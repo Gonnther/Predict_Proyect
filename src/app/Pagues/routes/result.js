@@ -13,12 +13,13 @@ class Result extends React.Component {
 
 
 	handleClick = (e)=> {
+		let URI = "/api/tasks/";
 			let comp = null;
 
 			if(e.target.className === "green") {
 				comp = "1";
 				let data = `${localStorage.opc[12]}${localStorage.opc[13]}${localStorage.opc[14]}${comp}`
-				fetch(`/api/tasks/${localStorage.data}`, {
+				fetch(`${URI}${localStorage.data}`, {
 						method: 'PUT',
 						headers: {
 							'Content-Type': 'application/json'
@@ -39,7 +40,7 @@ class Result extends React.Component {
 				
 				comp = "0";
 				let data = `${localStorage.opc[12]}${localStorage.opc[13]}${localStorage.opc[14]}${comp}`
-				fetch(`/api/tasks/${localStorage.data}`, {
+				fetch(`${URI}${localStorage.data}`, {
 						method: 'PUT',
 						headers: {
 							'Content-Type': 'application/json'

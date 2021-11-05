@@ -1,6 +1,6 @@
 import CompSimple from './metodo_de_comparacion_simple';
 
-fetch('/api/tasks')
+fetch(process.env.TASKS_URI)
 .then((resp) => resp.json())
 .then(function(data) {
 	data.choisee.forEach(choi => {

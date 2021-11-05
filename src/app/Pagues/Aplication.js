@@ -22,14 +22,16 @@ class Aplication extends React.Component {
 	
 
 	componentDidMount() {
+
 		this.time = Date.now(0);
 		this.x = [];
 		this.y = [];
 		this.z = 0;
 		this.addTask = ()=> {
 			if(this.x.length === 3) {
+					
 
-					const response = fetch('/api/tasks', {
+					const response = fetch("/api/tasks", {
 						method: 'POST',
 						headers: {
 							'Accept': 'application/json',

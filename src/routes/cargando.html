@@ -22,7 +22,7 @@
 		<script type="text/javascript">
 			var entrenar = [];
 			var obj = null;
-			const url = 'http://192.168.1.106:3000/api/tasks';
+			const url = process.env.TASKS_URI;
 			async function load() {
 
 				try {
