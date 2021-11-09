@@ -1,17 +1,13 @@
 import React from 'react';
 import {BrowserRouter , Link, Switch, Route} from 'react-router-dom';
-import '../Aplication.css';
 import '../AppRouter.css';
 
-
 class Cargando extends React.Component {
-
 	componentDidMount() {
 		const script = document.createElement("script");
 		script.src = "https://unpkg.com/brain.js";
 		script.async = true;
 		document.body.appendChild(script);
-		
 		let entrenar = [];
 		let obj = null;
 		const url = "/api/tasks";
@@ -19,8 +15,6 @@ class Cargando extends React.Component {
 		let res = null
 		this.loader = async function load() {
 				try {
-					
-					
 					obj = await(await fetch(url)).json();
 				} catch(e) {
 					console.log('error');
@@ -40,8 +34,11 @@ class Cargando extends React.Component {
 			 	}
 		 	}
 
-		 	let network = new brain.NeuralNetwork();
-		 	network.train(entrenar);
+
+		 	let network = new brain.NeuralNetwork({ hiddenLayers:[2], iterations: 60000});
+		 	const stats = network.train(entrenar);
+
+		 	console.log(stats);
 			let stored = localStorage.opc;
 			let entrada = {
 				op1: stored[12],
@@ -50,6 +47,8 @@ class Cargando extends React.Component {
 			}
 			let resultado = network.run(entrada);
 			predecir = Object.values(resultado);
+			console.log(resultado)
+
 
 			if(predecir > 0.5) {
 				res = 1;
@@ -62,21 +61,12 @@ class Cargando extends React.Component {
 				const { history } = this.props;
 				history.push('./Result');
 			}
-
 		}
 		this.loader();
-		// this.result = function() {
-			
-			
-		// 	}
-		// }
-		
-		
 	}
 	render() {
 		return(
 			<div className="loading">
-			
 				<div className="load"></div>
 				<div className="load"></div>
 				<script src="https://unpkg.com/brain.js"></script>
@@ -84,5 +74,4 @@ class Cargando extends React.Component {
 			)
 	}
 }
-
 export default Cargando;

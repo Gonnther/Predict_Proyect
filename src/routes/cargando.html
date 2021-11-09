@@ -22,7 +22,7 @@
 		<script type="text/javascript">
 			var entrenar = [];
 			var obj = null;
-			const url = process.env.TASKS_URI;
+			const url = "/api/tasks";
 			async function load() {
 
 				try {
@@ -31,25 +31,41 @@
 						console.log('error');
 					}
 				
-				
+				console.log(obj)
+				var tim = null;
 				for(let i = 0; i < obj.length; i++) {
+					if(i>16) {
+					tim = obj[i].timebtwn.split(",");
+		
 
 					entrenar.push(
 					{input:
 						{
 							op1: obj[i].choisee[0],
+							tim1: tim[0],
+							
 							op2: obj[i].choisee[1],
-							op3: obj[i].choisee[2]
+							tim2: tim[1],
+							
+							op3: obj[i].choisee[2],
+							tim3: tim[2],
+
+							
+						
+							
 						},
 					output:
 						{
 							op4: obj[i].choisee[3]
 						}
 					})
+				}
 
 				}
 				var network = new brain.NeuralNetwork();
-			network.train(entrenar);
+			console.log(entrenar);
+
+			console.log(network.train(entrenar));
 
 				const butt = document.getElementById("butt")
 				butt.addEventListener("click", function(e) {

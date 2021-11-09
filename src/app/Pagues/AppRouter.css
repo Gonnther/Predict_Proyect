@@ -1,29 +1,28 @@
-* {
+* {	
+	
 	box-sizing: border-box;
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
 	text-decoration: none;
-	/*background-color: #413973;*/
-	background-color: #000000;
-
+	background-color: black;
 }
-
 .Nav {
+	position: relative;
 	width: 100vw;
-	height: 5vh;
 	border: 8px;
-	background-color: #777;
 	border-color: #fff;
 	display: grid;
 	grid-template-areas: 
-	"Home About";
+	"Home About"
+	"load load";
 }
 
 .Home {
+	display: flex;
 	grid-area: Home;
 	letter-spacing: 4px;
-	font-size: 3em;
+	font-size: 3vh;
 	text-decoration: none;
 	font-family: sans-serif;
 	color: #f2f2f2;
@@ -34,7 +33,7 @@
 	text-decoration: none;
 	font-family: Trajan ;
 	color: #f2f2f2;
-	font-size: 3em;
+	font-size: 3vh;
 }
 .Next {
 	letter-spacing: 4px;
@@ -42,18 +41,19 @@
 	text-decoration: none;
 	font-family: Trajan ;
 	color: #f2f2f2;
-	font-size: 3em;
+	font-size: 3vh;
 }
 .About {
-	font-size: 3em;
+	display: flex;
+	font-size: 3vh;
 	letter-spacing: 4px;
 	grid-area: About;
 	text-decoration: none;
 	font-family: sans-serif;
 	color: #f2f2f2;
 
-}
 
+}
 .Link{
 	position: relative;
 	display: grid;
@@ -61,15 +61,50 @@
 	border-style: solid;
 	border-color: #fff;
 }
-
-
-.Content {
-	margin-top: 7vh;
+.loading {
+	height: 100vh;
+	width: 100vw;
+	grid-area: load;
+	/*position: relative;*/
+	filter: contrast(50);
+	align-items: center;
+	text-align: center;
+	align-items: center;
+	background-color: black;
+	
+}
+.load {
+	padding: 4vmin;
+	align-content: center;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 7vw;
-	padding-bottom: 7vw;
-	width: 80vw;
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	border-radius: 50%;
+	filter: blur(20px);
+}
+
+.load:first-child {
+	animation: trasladar 2s normal infinite
+}
+@keyframes trasladar{
+
+	0% {
+		transform: rotate(0deg) translate(-150px) rotate(360deg);
+	}
+	100% {
+		transform: rotate(360deg) translate(-150px) rotate(180deg);
+	}
+}
+
+.Content {
+	margin-top: 5vh;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	width: 75vw;
 	align-content: center;
 	border:5px;
 	border-style: solid;
@@ -90,89 +125,24 @@
 	background: -moz-linear-gradient(left, #ef5fa0 0%, #f93959 50%, #00aa6e 51%, #2dcb8c 100%);
 	background: -webkit-linear-gradient(left, #ef5fa0 0%, #f93959 50%, #00aa6e 51%, #2dcb8c 100%);
 	background: linear-gradient(left, #ef5fa0 0%, #f93959 50%, #00aa6e 51%, #2dcb8c 100%);
-	height: 23vw;
-	width: 23vw;
-
+	height: 18vmin;
+	width: 18vmin;
 }
 
 .box2{
 	margin: 0 auto;
 	grid-area: box2;
 	background-color: #777;
-	/*filter: blur(5px);*/
-	height: 23vw;
-	width: 23vw;
-
+	height: 18vmin;
+	width: 18vmin;
 }
 
 .text {
+	display: inline-block;
 	color: #fff;
 	letter-spacing: 2px;
 	text-align: center;
-	width: 23vw;
-	font-size: 4vw;
+	width: 15vmin;
+	font-size: 2.5vmin;
 	font-weight: 100;
 }
-.loading {
-	align-items: center;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-	height: 100vh;
-	width: 100vw;
-	filter: contrast(30);
-	background-color:black;
-}
-.load {
-	align-content: center;
-	margin-left: auto;
-	margin-right: auto;
-	top: 50%;
-	margin-top: -50%;
-	display: inline-block;
-	width: 150px;
-	height: 150px;
-	background-color: white;
-	margin: 40px;
-	border-radius: 50%;
-	filter: blur(20px);
-
-}
-
-.load:first-child {
-	animation: trasladar 2s alternate infinite
-}
-
-@keyframes trasladar{
-
-	0% {
-		transform: rotate(0deg) translate(-100px) rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg) translate(-100px) rotate(-360deg);
-	}
-
-}
-
-/*
-	grid-area: Home;
-	color: #f2f2f2;
-	font-size: 40px;
-	text-decoration: none;
-	background-color: #79bed9;*/
-/*.project {
-	letter-spacing: 4px;
-	background-color: #79bed9;
-	text-align: center;
-	text-decoration: none;
-	font-family: impact ;
-	color: #f2f2f2;
-	box-shadow: 4px 3px 0 #7a7a7a;
-	font-size: 4em;
-}*/
-
-/*	-webkit-box-shadow: 0px 25px 50px -15px rgba(0,0,0,50);
-	-moz-box-shadow:0px 25px 50px -15px rgba(0,0,0,50);
-	box-shadow: 0px 25px 50px -15px rgba(0,0,0,50);*/

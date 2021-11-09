@@ -1,3 +1,25 @@
-.tryText {
-	color: black;
+.divi {
+	display: flex;
+	height: 40vmin;
+	align-items: center;
 }
+.tryText {
+	width: 20vw;
+	margin-right: auto;
+	margin-left: auto;
+	border:5px;
+	border-radius: 25%;
+	border-style: solid;
+	border-color: #fff;
+	letter-spacing: 4px;
+	font-size: 3vh;
+	font-family: sans-serif;
+	color: white;
+}
+.tryText:hover {
+	color: black;
+	background: white;
+}
+
+
+

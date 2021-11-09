@@ -16,7 +16,8 @@ app.use(express.json());
 
 //Routers
 app.use('/api/tasks', require('./routes/task.routes'));
-app.use('/api/methods', require('./routes/methods.routes'));
+app.use('/api/success', require('./routes/success.routes'));
+
 app.use('/cargando', require('./routes/cargando.routes'));
 
 
