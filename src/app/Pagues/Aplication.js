@@ -79,7 +79,7 @@ class Aplication extends React.Component {
 		return(
 			<div>
 				<div className="aplicationcss">{this.addTask}
-				<h1 className="spa">Predictor</h1>
+				<h1 className="spa">Press the colorful buttons three times, the app will predict the fourth choisee</h1>
 				<button className="red" onClick={this.handleClick} type="submit"></button>
 				<button className="green" onClick={this.handleClick} type="submit"></button>
 				</div>
