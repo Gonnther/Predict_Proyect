@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>precio</title>
+	<script src="https://unpkg.com/brain.js">
+	</script>
+</head>
+	<body>
+			<script src="https://unpkg.com/brain.js">
+	</script>
+		<h1>estas en precio</h1>
+		<script src="https://unpkg.com/brain.js"></script>
+		<script type="text/javascript">	
+					
+			entrenar =
+			[
+				{
+					input:{value1: 100.03},
+					output: { value4: 100.03}
+				},
+				{ 
+					input:{value1: 100.3},
+					output: { value4: 99.89 }
+				},
+					
+				{
+					input:{value1: 99.89},
+					output: { value4: 100.02 }
+				}
+			]
+		var network = new brain.NeuralNetwork();
+		console.log(entrenar);
+		console.log(network.train(entrenar));
+		var entrada = {
+						value:100.02
+					}
+		var resultado = network.run(entrada);
+		console.log(resultado)
+		</script>
+	</body>
+</html>
